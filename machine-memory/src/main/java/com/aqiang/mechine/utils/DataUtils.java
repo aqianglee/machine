@@ -1,4 +1,4 @@
-package com.aqiang.mechine.cpu.utils;
+package com.aqiang.mechine.utils;
 
 import org.apache.commons.lang.StringUtils;
 

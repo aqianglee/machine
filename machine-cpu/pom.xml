@@ -9,6 +9,11 @@
 	<artifactId>machine-cpu</artifactId>
 	<dependencies>
 		<dependency>
+			<groupId>com.aqiang</groupId>
+			<artifactId>machine-memory</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>

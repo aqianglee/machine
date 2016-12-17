@@ -1,7 +1,7 @@
 package com.aqiang.mechine.cpu.control;
 
 public interface Registers {
-	public static Register R01 = new Register();
+	public static Register ADDRESS_REGISTER = new Register();
 	public static Register R02 = new Register();
 	public static Register R03 = new Register();
 	public static Register R04 = new Register();
@@ -19,5 +19,6 @@ public interface Registers {
 	public static Register R16 = new Register();
 	public static Register R17 = new Register();
 	public static Register R18 = new Register();
-	public static Register R19 = new Register();
+	public static Register CONDITION_REGISTER = new Register();
+	public static Register SHUTDOWN_REGISTER = new Register();
 }

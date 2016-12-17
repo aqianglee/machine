@@ -10,13 +10,14 @@ public class MainMemoryTest {
 		MainMemory mainMemory = new MainMemory();
 		for (int i = 0; i < 1024; i++) {
 			String data = UUID.randomUUID().toString();
-			mainMemory.write(i, data);
-			assert data.equals(mainMemory.read(i));
+			String address = Integer.toBinaryString(i);
+			mainMemory.write(address, data);
+			assert data.equals(mainMemory.read(address));
 			System.out.print(data);
 		}
 		System.out.println();
 		for (int i = 0; i < 1024; i++) {
-			System.out.print(mainMemory.read(i));
+			System.out.print(mainMemory.read(Integer.toBinaryString(i)));
 		}
 		System.out.println();
 	}

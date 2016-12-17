@@ -2,6 +2,8 @@ package com.aqiang.mechine.cpu.utils;
 
 import org.testng.annotations.Test;
 
+import com.aqiang.mechine.utils.DataUtils;
+
 public class DataUtilsTest {
 
 	@Test

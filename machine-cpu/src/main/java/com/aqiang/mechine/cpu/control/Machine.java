@@ -12,7 +12,6 @@ import com.aqiang.mechine.utils.DataUtils;
 
 public class Machine {
 	private CommondAddressCreater creater;
-	private CommandDecoder decoder;
 
 	public void init() {
 		Registers.ADDRESS_REGISTER.write("0000000000000000");
@@ -32,7 +31,6 @@ public class Machine {
 			e.printStackTrace();
 		}
 		creater = new CommondAddressCreater();
-		decoder = new CommandDecoder();
 	}
 
 	public void start() {
@@ -45,7 +43,7 @@ public class Machine {
 		String commandCode = null;
 		while ("00000000".equals(Registers.SHUTDOWN_REGISTER.read())) {
 			commandCode = Mamerys.mainMemory.read(creater.getNextAddress());
-			command = decoder.findCommand(commandCode);
+			command = CommandDecoder.getDecoder().findCommand(commandCode);
 			if (command == null) {
 				continue;
 			}

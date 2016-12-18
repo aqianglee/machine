@@ -6,7 +6,7 @@ public class ShutdownCommand extends BaseCommand {
 
 	@Override
 	public void execute() {
-		System.out.println("execute shutdown command!");
+		System.out.println("machine shutdown!");
 		Registers.SHUTDOWN_REGISTER.write("00000001");
 	}
 

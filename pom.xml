@@ -12,5 +12,6 @@
 	<modules>
 		<module>machine-cpu</module>
 		<module>machine-memory</module>
+		<module>machine-screen</module>
 	</modules>
 </project>

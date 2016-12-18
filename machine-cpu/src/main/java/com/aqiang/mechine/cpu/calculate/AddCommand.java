@@ -2,8 +2,11 @@ package com.aqiang.mechine.cpu.calculate;
 
 import com.aqiang.mechine.cpu.control.Registers;
 import com.aqiang.mechine.utils.DataUtils;
+
 /**
- * add command add r2 and r3 save at r2
+ * add command tag 00000010<br>
+ * size 0<br>
+ * 
  * @author kyo
  *
  */

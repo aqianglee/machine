@@ -11,7 +11,6 @@ import com.aqiang.mechine.cpu.calculate.Executeable;
 import com.aqiang.mechine.utils.DataUtils;
 
 public class Machine {
-	private CommondAddressCreater creater;
 
 	public void init() {
 		Registers.ADDRESS_REGISTER.write("0000000000000000");
@@ -30,7 +29,6 @@ public class Machine {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		creater = new CommondAddressCreater();
 	}
 
 	public void start() {
@@ -41,6 +39,7 @@ public class Machine {
 	public void run() {
 		Executeable command = null;
 		String commandCode = null;
+		CommandAddressCreater creater = CommandAddressCreater.getCreater();
 		while ("00000000".equals(Registers.SHUTDOWN_REGISTER.read())) {
 			commandCode = Mamerys.mainMemory.read(creater.getNextAddress());
 			command = CommandDecoder.getDecoder().findCommand(commandCode);

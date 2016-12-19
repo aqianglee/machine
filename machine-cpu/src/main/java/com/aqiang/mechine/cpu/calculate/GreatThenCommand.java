@@ -3,13 +3,13 @@ package com.aqiang.mechine.cpu.calculate;
 import com.aqiang.mechine.cpu.control.Registers;
 
 /**
- * compare > command <br>
+ * command tag : compare > command <br>
  * compare r2 > r3 ? ConditionRegister is 00000000 : 00000001
  * 
  * @author administrator
  *
  */
-public class LargeThenCommand extends BaseCommand {
+public class GreatThenCommand extends BaseCommand {
 
 	@Override
 	public void execute() {
@@ -22,7 +22,7 @@ public class LargeThenCommand extends BaseCommand {
 
 	@Override
 	public int size() {
-		return 2;
+		return 0;
 	}
 
 }

@@ -40,6 +40,7 @@ public class Monitor extends JFrame {
 		});
 		shutdown.setBounds(820, 60, 150, 50);
 		shutdown.setVisible(true);
+		shutdown.setEnabled(false);
 		shutdown.addActionListener(new ActionListener() {
 
 			@Override

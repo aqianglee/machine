@@ -22,11 +22,11 @@ public class Monitor extends JFrame {
 		this.setLocation((width - Config.MONITOR_WIDTH) / 2, (height - Config.MONITOR_HEIGHT) / 2);
 		this.setVisible(true);
 		this.setLayout(null);
-		Screen screen = new Screen();
+		final Screen screen = new Screen();
 		screen.init();
 		this.add(screen);
-		Button startup = new Button("startup");
-		Button shutdown = new Button("shutdown");
+		final Button startup = new Button("startup");
+		final Button shutdown = new Button("shutdown");
 		startup.setVisible(true);
 		startup.setBounds(820, 10, 150, 50);
 		startup.addActionListener(new ActionListener() {

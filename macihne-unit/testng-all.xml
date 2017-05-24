@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="all-core-tests">
+	<test verbose="2" name="core-tests" annotations="JDK">
+		<packages>
+			<package name="com.aqiang.machine.unit"></package>
+		</packages>
+	</test>
+</suite>

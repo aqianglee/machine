@@ -20,9 +20,13 @@ public class SwitchTest {
 		List<Lead> leads = s.getLeads();
 		assert leads.size() == 2;
 		ConnectUtils.connect(leads.get(0), pointH);
+		assert leads.get(0).getVoltage() == 5.0;
+		assert leads.get(1).getVoltage() == null;
 		ConnectUtils.connect(leads.get(1), pointL);
+		assert leads.get(1).getVoltage() == null;
 		assert pointL.getVoltage() == null;
 		s.switchStatus();
+		assert leads.get(1).getVoltage() == 5.0;
 		assert pointL.getVoltage() == 5.0;
 	}
 }

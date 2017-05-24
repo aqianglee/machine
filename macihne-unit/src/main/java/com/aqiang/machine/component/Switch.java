@@ -17,14 +17,14 @@ public class Switch extends Component {
 
 	@Override
 	public void update() {
-		Double v = getLeads().get(0).getVoltage();
-		Double v2 = getLeads().get(1).getVoltage();
+		Lead leadA = getLeads().get(0);
+		Lead leadB = getLeads().get(1);
 		if (status) {
-			if(v == null) {
-				
+			if (leadA.getVoltage() == null) {
+				leadA.setVoltage(leadB.getVoltage());
 			}
-			if(v2 == null) {
-				
+			if (leadB.getVoltage() == null) {
+				leadB.setVoltage(leadA.getVoltage());
 			}
 		}
 	}
@@ -36,6 +36,7 @@ public class Switch extends Component {
 
 	public void switchStatus() {
 		this.status = !status;
+		update();
 	}
 
 }

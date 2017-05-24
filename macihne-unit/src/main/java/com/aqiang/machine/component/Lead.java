@@ -12,13 +12,16 @@ public class Lead {
 	}
 
 	public void setVoltage(Double voltage) {
-		List<Lead> leads = point.getLeads();
-		for (Lead lead : leads) {
-			if (!lead.equals(this)) {
-				lead.getComponent().update();
+		this.voltage = voltage;
+		if (point != null) {
+			List<Lead> leads = point.getLeads();
+			point.update();
+			for (Lead lead : leads) {
+				if (!lead.equals(this)) {
+					lead.getComponent().update();
+				}
 			}
 		}
-		this.voltage = voltage;
 	}
 
 	public Point getPoint() {

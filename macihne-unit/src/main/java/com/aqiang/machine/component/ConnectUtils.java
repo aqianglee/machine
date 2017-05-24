@@ -11,7 +11,7 @@ public class ConnectUtils {
 			point.setVoltage(lead.getVoltage());
 		}
 		for (Lead l : point.getLeads()) {
-			if (!l.equals(lead)) {
+			if (l.getComponent() != null) {
 				l.getComponent().update();
 			}
 		}

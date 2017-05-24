@@ -10,9 +10,9 @@ public class Power extends Component {
 	}
 
 	public Power(Double voltage) {
-		this.setVoltage(voltage);
 		positive = new Lead();
 		negative = new Lead();
+		this.setVoltage(voltage);
 		update();
 	}
 

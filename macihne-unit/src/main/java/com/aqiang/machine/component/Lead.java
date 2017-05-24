@@ -17,7 +17,7 @@ public class Lead {
 			List<Lead> leads = point.getLeads();
 			point.update();
 			for (Lead lead : leads) {
-				if (!lead.equals(this)) {
+				if (lead.getComponent() != null) {
 					lead.getComponent().update();
 				}
 			}

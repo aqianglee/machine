@@ -21,6 +21,7 @@ public class Light extends Component {
 	public void update() {
 		Double leadA = getLeads().get(0).getVoltage();
 		Double leadB = getLeads().get(1).getVoltage();
+		System.out.println(leadA + ":" + leadB);
 		if (leadA != null && leadB != null && Math.abs(leadA - leadB) > 0) {
 			light = true;
 		} else {
